@@ -7,7 +7,10 @@
 *   rode "npm run dev" no lado servidor
 *   rode "npm start"
 
+  <br/>
+
 >Com o sistema instalado localmente: 
+<br/>
 
 > Faça o Login no website
 
