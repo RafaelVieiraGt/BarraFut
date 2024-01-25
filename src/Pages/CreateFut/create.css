@@ -123,3 +123,36 @@
 .areasProntas select:active{
     border: 1px solid #C1BBBB;
 }
+
+@media (max-width: 500px){
+    .conteudo-main{
+        width: 75%;
+        padding: 30px;
+    }
+
+    .conteudo-main header h1{
+        font-size: 25px;
+    }
+
+    .conteudo-main header h1::after{
+        width: 65px;
+    }
+
+    .conteudo-main header span{
+        font-size: 16px;
+        
+    }
+    .inputarea{
+        padding: 5px 8px;
+    }
+    .inputarea label{
+        font-size: 16px;
+    }
+    .inputarea input{
+        width: 80%;
+    }
+    #activated{
+        max-width: 342px;
+    }
+    
+}

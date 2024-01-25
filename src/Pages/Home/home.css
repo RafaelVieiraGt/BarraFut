@@ -147,3 +147,37 @@
 .iconContainer:hover{
     color: red;
 }
+
+@media (max-width: 500px){
+
+    .container-feed main{
+        grid-template-columns: 1fr
+    }
+    .container-feed h1{
+        font-size: 25px;
+    }
+    .container-feed h1::after{
+        width: 95px;
+    }
+
+    .container-feed main article img{
+        width: 40%;
+
+    }
+    .infos h2{
+        font-size: 25px;
+    }
+    .organizador{
+        font-size: 16px;
+    }
+    .list ul li{
+        font-size: 16px;
+    }
+    .localizacao{
+        font-size: 16px;
+    }
+    .buttonarea button{
+        padding: 5px 8px;
+        font-size: 15px;
+    }
+}

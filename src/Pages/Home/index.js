@@ -99,7 +99,7 @@ function Home(){
         let confirmadoButton = document.getElementById(id);
         let cancelarButton = document.getElementById(`12${id}345`);
         let confirmado = confirmadoButton.value
-        
+        let h1 = document.getElementById('titulo')
 
 
         cancelarButton.style.display = "inline-block"
@@ -113,7 +113,12 @@ function Home(){
             confirmado
         })
         .then(()=>{
-            getData()
+            if(h1.innerText === "Meus jogos"){
+                getMyFuts(userId)
+            }else{
+                getData()
+            }
+            
         })
         .catch((error)=>{
             console.log(error)
@@ -124,6 +129,7 @@ function Home(){
         let cancelarButton = document.getElementById(`12${id}345`)
         let confirmadoButton = document.getElementById(id)
         let confirmado = cancelarButton.value
+        let h1 = document.getElementById('titulo')
         confirmadoButton.disabled = false
         confirmadoButton.style.cursor = "pointer"
         cancelarButton.style.display = "none"
@@ -132,7 +138,11 @@ function Home(){
             confirmado
         })
         .then(()=>{
-            getData()
+            if(h1.innerText === "Meus jogos"){
+                getMyFuts(userId)
+            }else{
+                getData()
+            }
         })
         .catch((error)=>{
             console.log(error)

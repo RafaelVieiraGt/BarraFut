@@ -176,3 +176,9 @@ span{
         transform: translateX(0%);
     }
 }
+
+@media (max-width: 500px){
+    .formbox{
+        max-width: 400px;
+    }
+}
