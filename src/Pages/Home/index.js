@@ -207,7 +207,7 @@ function Home(){
                                     </ul>  
                                      
                                 </div>
-                                <span className='localizacao'> <FaMapMarkerAlt size={20}/>{typeof calcularLoc(data) === 'number' ? `${calcularLoc(data).toFixed(3)} Km de você!` : 'Erro ao calcular a distância'}</span>
+                                <span className='localizacao'> <FaMapMarkerAlt size={20}/>{typeof calcularLoc(data) === 'number' ? `${calcularLoc(data).toFixed(3)} Km de você!` :  calcularLoc(data) === NaN ? 'Geolocalização não permitida' : 'Erro ao calcular distancia'}</span>
                                 <div className='buttonarea'>
                                     <button className='marcar' id={data._id} value="confirmado" onClick={() => handleConfirm(data._id)}>Vou colar!</button> 
                                     <button className='desmarcar' value="cancelado" id={`12${data._id}345`} onClick={() => handleCancel(data._id)}>Miou</button>
