@@ -5,12 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { auth } from '../../Services/firebaseconnection'
 import { useNavigate } from 'react-router-dom'
+import { FaRegEyeSlash } from "react-icons/fa";
+import { IoEyeSharp } from "react-icons/io5";
 function LoginRegister(){
 
     const[btnStage, setBtnStage] = useState("register");
     const[nome, setNome] = useState("")
     const[email, setEmail] = useState("")
     const[senha, setSenha] = useState("")
+    const[view, setView] = useState(false)
 
     const navigate = useNavigate()
 
@@ -88,6 +91,19 @@ function LoginRegister(){
          }
     }
 
+    function handleSeePassword(){
+        let input = document.getElementById('passwd')
+        setView(true)
+        input.type = "text"
+        
+    }
+
+    function handleHidePassword(){
+        let input = document.getElementById('passwd')
+        setView(false)
+        input.type = "password"
+
+    }
     return(
         <div className='container-login'>
             <div className='animation'>
@@ -124,11 +140,15 @@ function LoginRegister(){
                         <div className='inputfield'>
                             <FontAwesomeIcon icon={faLock} size={25}/>
                             <input
+                                id='passwd'
                              type='password'
                               placeholder='Senha'
                               value={senha}
                               onChange={(e) => setSenha(e.target.value)}
                               />
+
+                                {!view ? (<FaRegEyeSlash onClick={handleSeePassword} className='viewPassword' size={25}/>) : <IoEyeSharp size={25} className='viewPassword' onClick={handleHidePassword} />}
+                              
                         </div>
                     </div>
                     <div className='btnfield'>

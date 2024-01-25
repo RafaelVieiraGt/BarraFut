@@ -135,6 +135,14 @@ span{
 #headerAnimation, #headerAnimation a{
     color: #3c00a0;
 }
+.viewPassword{
+    margin-right: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.viewPassword:hover{
+    color: #3c00a0;
+}
 @keyframes fadeIn{
     0%{
         opacity: 0;
