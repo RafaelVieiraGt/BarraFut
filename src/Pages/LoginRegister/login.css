@@ -187,6 +187,13 @@ span{
 
 @media (max-width: 500px){
     .formbox{
-        max-width: 400px;
+        max-width: 350px;
+    }
+    .formbox h1{
+        font-size: 25px;
+    }
+    input{
+        padding: 15px 10px;
+        
     }
 }
