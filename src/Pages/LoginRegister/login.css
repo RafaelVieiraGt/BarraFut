@@ -1,0 +1,178 @@
+body{
+    font-family: 'Poppins';
+}
+
+:root{
+    --gradiente: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8))
+}
+.container-login{
+    width: 100%;
+    height: 100vh;
+    background-image: var(--gradiente), url('../../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.formbox{
+    width: 90%;
+    max-width: 450px;
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+.formbox h1{
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #3c00a0;
+    position: relative;
+}
+.formbox h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inputgroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 290px;
+}
+
+.inputfield{
+    background: #eaeaea;
+    width: 80%;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+input{
+    width: 100%;
+    font-family: 'Poppins';
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+.inputfield svg{
+    margin-left: 15px;
+    color: #999;
+}
+.btnfield{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+.btnfield button{
+    width: 40%;
+    font-family: 'Poppins';
+    font-size: 15px;
+    background: #3c00a0;
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.btnfield button.disable{
+    background: #eaeaea;
+    color: #999;
+}
+span{
+    font-size: 45px;
+}
+.animation{
+    text-align: center;
+    font-family: 'Poppins';
+    letter-spacing: 1px;
+    color: #fff;
+    display: inline-block;
+    animation: fadeIn 1.5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.animation a{
+    text-decoration: none;
+}
+.first{
+    display: inline-block;
+    animation: firstspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: 1;
+    position: relative;
+    font-weight: bold;
+    
+}
+.slide{
+    display: inline-flex;
+    overflow: hidden;
+}
+.second{
+    font-weight: bold;
+    z-index: -1;
+    display: inline-block;
+    animation: secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    
+}
+#headerAnimation, #headerAnimation a{
+    color: #3c00a0;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes firstspan{
+    0%{
+        transform: translateX(50%);
+    }
+    60%{
+        transform: translateX(50%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes secondspan{
+    0%{
+        transform: translateX(-100%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}

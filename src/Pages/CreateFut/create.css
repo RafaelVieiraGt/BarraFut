@@ -1,0 +1,125 @@
+.container-create{
+    width: 100%;
+    
+    font-family: 'poppins';
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url('../../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    
+}
+.container-create main{
+    width: 100%;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.conteudo-main header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.conteudo-main header h1{
+    color: #3c00a0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.conteudo-main header h1::after{
+    content: '';
+    width: 80px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.conteudo-main header span{
+    font-size: 20px;
+}
+.conteudo-main{
+    width: 50%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 30px 0;
+    border-radius: 12px;
+}
+.inputarea{
+    padding: 7px 12px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #C1BBBB;
+    transition: all;
+    width: 100%;
+    max-width: 450px
+}
+.inputarea:hover{
+    border-left: 4px solid #3c00a0;
+}
+.inputarea label{
+    color: #3c00a0;
+}
+.inputarea input{
+    width: 90%;
+}
+#selectModalidade{
+    border: 0;
+    font-family: 'Poppins';
+    padding: 5px 8px;
+}
+#mapa{
+    gap: 20px;
+}
+.conteudo-main button{
+    font-size: 16px;
+    font-family: 'Poppins';
+    width: 30%;
+    border: 0;
+    border-radius: 12px;
+    padding: 8px 12px;
+    background: #3c00a0;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+#activated{
+    max-width: 400px;
+    padding: 6px 8px;
+    transition: all ;
+    margin-bottom: 5px;
+}
+
+.maparea{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.areasProntas select{
+    font-family: 'Poppins';
+    padding: 12px 15px;
+    border: 1px solid #C1BBBB;
+    transition: all;
+    width: 100%;
+    max-width: 418px;
+    margin-bottom: 20px;
+}
+.areasProntas select:hover{
+    border-left: 4px solid #3c00a0;
+}
+.areasProntas select:active{
+    border: 1px solid #C1BBBB;
+}
