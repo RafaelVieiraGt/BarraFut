@@ -38,6 +38,7 @@ function CreateFut(){
                 data
             })
             .then(()=> {
+                toast.success("Jogo cadastrado com sucesso!")
                 setTitle('')
                 setModalidade('')
                 setVagas(0)
@@ -45,9 +46,10 @@ function CreateFut(){
                 setLatitude(null)
                 setLongitude(null)
                 setData('')
-                toast.success("Jogo cadastrado com sucesso!")
+                
             })
             .catch((error) => {
+                toast.error("algo deu errado!")
                 setTitle('')
                 setModalidade('')
                 setVagas(0)
@@ -55,7 +57,7 @@ function CreateFut(){
                 setLatitude(null)
                 setLongitude(null)
                 setData('')
-                toast.error("algo deu errado!")
+                
                 console.log(error)
             })
         }

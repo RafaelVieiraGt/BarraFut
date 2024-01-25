@@ -17,6 +17,7 @@ import { toast } from 'react-toastify';
 import Footer from '../../Components/Footer';
 
 
+
 function Home(){
 
     const[futs, setFuts] = useState([])
@@ -50,6 +51,7 @@ function Home(){
     
     
     async function getData(){
+        
         const trashs = document.getElementsByClassName("iconContainer")
         const h1 = document.getElementById('titulo')
         h1.innerText = "Jogue perto de você!"
@@ -181,7 +183,7 @@ function Home(){
       }
     return(
         <div className='container-feed'>
-            <Header getFuts={()=>getData()} getMyFuts={ () => getMyFuts(userId, )} />
+            <Header getData={()=>getData()} getMyFuts={ () => getMyFuts(userId )} />
             <h1 id='titulo'>Jogue perto de você!</h1>
             <main>
                 { futs.map((data)=> (
